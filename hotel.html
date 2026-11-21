@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VICE CITY HOTEL — Guest Folio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #16082e; }
+  .page {
+    width: 900px;
+    background: linear-gradient(165deg, #1e0a3c 0%, #3d1a6e 55%, #572a8f 100%);
+    padding: 24px 24px 26px;
+    font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+  }
+  /* ---------- the bill ---------- */
+  .paper {
+    position: relative;
+    background: #fff9ec;
+    border: 4px solid #c9a227;
+    outline: 2px solid #c9a227;
+    outline-offset: 7px;
+    padding: 34px 40px 30px;
+  }
+  .stars { text-align: center; color: #c9a227; font-size: 30px; letter-spacing: 12px; }
+  h1 {
+    text-align: center;
+    font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 62px;
+    letter-spacing: 7px;
+    color: #2a0a4a;
+    margin-top: 6px;
+  }
+  .sub {
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 5px;
+    color: #6b5a8a;
+    margin-top: 8px;
+  }
+  .folio {
+    text-align: center;
+    font-family: "DejaVu Sans Mono", "Courier New", monospace;
+    font-size: 19px;
+    letter-spacing: 2px;
+    color: #8a7a5a;
+    margin-top: 10px;
+  }
+  /* the one instant joke: a huge red stamp */
+  .stamp {
+    position: absolute;
+    top: 252px;
+    right: 26px;
+    transform: rotate(-12deg);
+    color: #d81e2c;
+    border: 5px solid #d81e2c;
+    border-radius: 10px;
+    padding: 10px 20px 12px;
+    font-size: 47px;
+    font-weight: bold;
+    line-height: 1.04;
+    letter-spacing: 2px;
+    text-align: center;
+    background: rgba(255, 249, 236, 0.88);
+    box-shadow: inset 0 0 0 2px #fff9ec, inset 0 0 0 4px #d81e2c;
+    z-index: 2;
+  }
+  .checkin { max-width: 470px; margin-top: 30px; }
+  .checkin .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 7px 0;
+    font-size: 22px;
+  }
+  .checkin .k { font-weight: bold; letter-spacing: 2px; color: #2a0a4a; white-space: nowrap; }
+  .checkin .v { font-family: "DejaVu Sans Mono", "Courier New", monospace; color: #3a2a5a; text-align: right; }
+  .rule { border-top: 3px dashed #c9a227; margin: 24px 0; }
+  .items .item {
+    display: flex;
+    align-items: baseline;
+    padding: 9px 0;
+  }
+  .items .n { font-family: "DejaVu Sans Mono", "Courier New", monospace; font-size: 23px; color: #241a3a; white-space: nowrap; }
+  .items .d { flex: 1; border-bottom: 2px dotted #b9a06a; margin: 0 12px 5px; }
+  .items .p { font-family: "DejaVu Sans Mono", "Courier New", monospace; font-size: 26px; font-weight: bold; color: #241a3a; white-space: nowrap; }
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: #2a0a4a;
+    padding: 20px 26px;
+    margin-top: 26px;
+  }
+  .total .t { font-size: 38px; font-weight: bold; letter-spacing: 4px; color: #ffffff; }
+  .total .amt { font-family: "DejaVu Serif", Georgia, serif; font-size: 76px; font-weight: bold; color: #f5c542; line-height: 1; }
+  /* ---------- the concierge band ---------- */
+  .band {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #16082e;
+    border: 3px solid #c9a227;
+    padding: 28px 32px;
+    margin-top: 26px;
+  }
+  .ghost {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.16), 0 0 44px rgba(230, 0, 126, 0.55);
+  }
+  .paid1 {
+    font-size: 41px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.12;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+  .paid2 { font-size: 24px; color: #d9c8f5; margin-top: 12px; }
+  .pill {
+    display: inline-block;
+    background: #ffffff;
+    color: #e6007e;
+    font-size: 34px;
+    font-weight: bold;
+    padding: 8px 30px;
+    border-radius: 999px;
+    margin-top: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="paper">
+    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <h1>VICE CITY HOTEL</h1>
+    <div class="sub">OCEAN DRIVE &middot; VICE CITY &middot; EST. 2013</div>
+    <div class="folio">GUEST FOLIO &mdash; FINAL BILL &middot; No. 4811</div>
+
+    <div class="stamp">13-YEAR<br>STAY</div>
+
+    <div class="checkin">
+      <div class="row"><span class="k">CHECKED IN</span><span class="v">SEP 17, 2013</span></div>
+      <div class="row"><span class="k">CHECKED OUT</span><span class="v">STILL HERE</span></div>
+      <div class="row"><span class="k">GUEST</span><span class="v">a very patient fan</span></div>
+      <div class="row"><span class="k">ROOM</span><span class="v">THE PENTHOUSE</span></div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="items">
+      <div class="item"><span class="n">Room &mdash; 4,811 nights</span><span class="d"></span><span class="p">$4,811</span></div>
+      <div class="item"><span class="n">Wi-Fi &mdash; still buffering Trailer 3</span><span class="d"></span><span class="p">$0.00</span></div>
+      <div class="item"><span class="n">Room service &mdash; Jason &amp; Lucia</span><span class="d"></span><span class="p">FREE</span></div>
+      <div class="item"><span class="n">Late checkout &mdash; 13 years overdue</span><span class="d"></span><span class="p">$0.00</span></div>
+    </div>
+
+    <div class="total"><span class="t">TOTAL DUE</span><span class="amt">$4,811</span></div>
+  </div>
+
+  <div class="band">
+    <img class="ghost" src="ghost-badge.png" alt="the make.fun ghost, your concierge">
+    <div>
+      <div class="paid1">PAID BY MY AI AGENT</div>
+      <div class="paid2">with a bounty payout it earned on</div>
+      <div class="pill">make.fun</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
